@@ -52,8 +52,34 @@ console.log(date) // ОШИБКА!!!!
 
 
 
+/*пример ОБЛАСТИ ВИДИМОСТИ */
+const scope = 'Global Scope';
+
+function localScope() {
+    console.log('this is a local scope')
+    function child() {
+        console.log('this is a child of the local scope');
+    }
+}
+
+if (scope) {
+    console.log('this is a block scope');
+} else {
+    console.log('this is also block scope');
+}
+
+for (let i = 0; i > 10; i++) {
+    console.log('this is also block scope')
+}
 
 
+let varschool = 'HSchool';
+let varcompany = 'company';
+console.log (varschool); // выйдет в консоль 'HSchool'
+console.log (varcompany); // выйдет в консоль 'company'
+
+let sum_var = varschool + varcompany;
+console.log (varschool); // выйдет в консоль 'HSchoolcompany'
 
 
 
