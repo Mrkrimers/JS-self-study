@@ -73,22 +73,55 @@ for (let i = 0; i > 10; i++) {
 }
 
 
+/* ИНИЦИАЛИЗАЦИЯ ПЕРЕМЕННЫХ */
 let varschool = 'HSchool';
 let varcompany = 'company';
-console.log (varschool); // выйдет в консоль 'HSchool'
-console.log (varcompany); // выйдет в консоль 'company'
+console.log(varschool); // выйдет в консоль 'HSchool'
+console.log(varcompany); // выйдет в консоль 'company'
 
 let sum_var = varschool + varcompany;
-console.log (varschool); // выйдет в консоль 'HSchoolcompany'
+console.log(varschool); // выйдет в консоль 'HSchoolcompany'
 
 
 
+// функциональная область видимости то что заключено в тело функции 
+function getDate() {
+    const date = new Date()
+    return date
+}
+
+
+// HOISTING (поднятие переменных)
+company = 'HSchool'
+console.log(company);  // в консоль выйдет 'HSchool' НЕТ ОШИБКИ!!!!
+var company
+
+company = 'HSchool'
+console.log(company);  // ОШИБКА!!!!
+let company
 
 
 
+/* BigInt */
+const BigInt = 1240255921210957218612592109n;
+const sameBigint = BigInt("214215421521512521521521");
+const bigintFromNumber = BigInt(10); // то же самое, что и 10n
 
 
+/* ПРОСТЫЕ ЧИСЛА*/
+let inf = Infinity;      // прямое присвоение бесконечности  
+inf = 57 / 0;            // Infinity получается при делении на ноль
+inf = -Infinity;         // есть отрицательная бесконечность
+inf = 57 / -0;           // -Infinity
+
+let notNumber = NaN;
+notNumber = 'строка' * 5; // При ошибке вычислений вернет NaN
 
 
-
-
+/* Оператор остатка деления*/
+const num = 10;
+if (num % 2 ===0){
+    console.log('четное')
+} else {
+    console.log('нечетное')
+}
